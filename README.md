@@ -1,4 +1,4 @@
-﻿# Portif-lioSobreMim
+﻿# PortifolioSobreMim
 
 # Projeto Portfólio Full Stack
 
