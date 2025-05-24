@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte global e fundo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a436bc2; /* Azul roxo translúcido */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a436bc2; /* Azul roxo */
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(26, 67, 107, 0.4); /* sombra suave com a cor azul roxo */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header .idioma-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+header .idioma-btn:hover {
+    background-color: white;
+    color: #333333;
+}
+
+/* Menu de navegação */
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f4f4f4;
+    transform: scale(1.1);
+}
+
+/* Botão contato */
+header .btn-contato {
+    background-color: #7a84c8; /* Azul médio */
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(122, 132, 200, 0.6);
+}
+
+header .btn-contato:hover {
+    background-color: #6a76b1; /* Azul mais escuro */
+    box-shadow: 0 6px 18px rgba(106, 118, 177, 0.8);
+}
+
+/* Seções gerais */
+section {
+    background-color: white;
+    text-align: center;
+    padding: 60px 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(26, 67, 107, 0.12); /* sombra azul suave */
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(26, 67, 107, 0.18);
+}
+
+section h2 {
+    font-size: 2.4em;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #1a436b; /* Azul escuro */
+    text-shadow: 1px 1px 3px rgba(26, 67, 107, 0.2);
+}
+
+section p {
+    font-size: 1.25em;
+    color: #666666; /* Cinza claro para texto secundário */
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+}
+
+section a {
+    color: #7a84c8; /* Azul médio */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    text-decoration: underline;
+    color: #6a76b1; /* Azul mais escuro */
+}
+
+/* Projetos */
+.project {
+    background-color: #f4f4f4; /* Cinza bem claro */
+    border: 1px solid #ddd;
+    padding: 30px 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(122, 132, 200, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.project:hover {
+    box-shadow: 0 12px 30px rgba(122, 132, 200, 0.25);
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    color: #1a436b;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #555555;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        margin: 20px 0;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 20px;
+        margin: 30px 15px;
+        max-width: 95%;
+    }
+
+    .project {
+        padding: 20px 15px;
+        margin: 15px 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .project h3 {
+        font-size: 1.4em;
+    }
+}
+
+/* Link WhatsApp */
+.whatsapp-link {
+    color: #23d612dc; /* Verde WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: #094411;
+    text-decoration: underline;
+}
+
+/* Imagem */
+img {
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(26, 67, 107, 0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}

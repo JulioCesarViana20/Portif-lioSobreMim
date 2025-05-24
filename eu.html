@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="eu.css" />
+    <title>Portfólio</title>
+</head>
+<body>
+
+    <header>
+
+        <div> Julio Cesar </div>
+
+        <button class="idioma-btn" onclick="changeLanguage('pt')">Português</button>
+        <button class="idioma-btn" onclick="changeLanguage('en')">English</button>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#about" class="lang-about-title">Sobre</a></li>
+                <li><a href="#project" class="lang-projects-title">Projetos</a></li>
+                <li><a href="#comunication" class="lang-contact-title">Comunicação</a></li>
+                <li><a href="#Github" class="lang-github-title">MeuGitHub</a></li>
+                <li><a href="#Especializacao" class="lang-especializacao-title">Especializações</a></li>
+            </ul>
+        </nav>
+
+        <ul>
+            <li><a href="https://wa.me/qr/WRH2CLQZDEXLK1" class="whatsapp-link">Entre em Contato por Whatsapp</a></li>
+        </ul>
+
+    </header>
+
+    <section id="about">
+        <h2 class="lang-about-title">Sobre</h2>
+        <p class="lang-about-description">Meu nome é Julio Cesar, sou desenvolvedor de back-end.</p>
+    </section>
+
+    <section id="project">
+        <h2 class="lang-projects-title">Projetos</h2>
+        <div class="project">
+            <li><a href="https://github.com/JulioCesarViana20/quiz-stranger-things/blob/main/README.md" class="gitHub-link">Entre no README!</a></li>
+            <p class="lang-project1-description">Esse projeto foi desenvolvido com HTML, CSS e JS.</p>
+        </div>
+        <div class="siteDeNamoro">
+            <li><a href="https://github.com/JulioCesarViana20/PedidoDeNamoro/blob/main/README.md" class="gitHub-link">Entre no README!</a></li>
+            <p class="lang-project2-description">Este site de relacionamento foi desenvolvido com HTML, CSS e JS.</p>
+        </div> 
+    </section>
+
+    <section id="comunication">
+        <h2 class="lang-contact-title">Comunicação</h2>
+        <p class="lang-contact-description">Entre em contato comigo por email(20juliocesar12@gmail.com) ou Whatsapp.</p>
+    </section>
+
+    <section id="Github">
+        <h2 class="lang-github-title">Github</h2>
+        <li><a href="https://github.com/JulioCesarViana20" class="gitHub-link lang-github-link">Entre no meu gitHub!</a></li>
+    </section>
+
+    <section id="Especializacao">
+        <h2 class="lang-especializacao-title">certificados</h2>
+        <img src="logica.jpg" alt="certificado" />
+    </section>
+
+    <script>
+    function changeLanguage(lang) {
+      const texts = {
+        pt: {
+          "about-title": "Sobre",
+          "about-description": "Meu nome é Julio Cesar, sou desenvolvedor de back-end.",
+          "projects-title": "Projetos",
+          "project1-description": "Esse projeto foi desenvolvido com HTML, CSS e JS.",
+          "project2-description": "Este site de relacionamento foi desenvolvido com HTML, CSS e JS.",
+          "contact-title": "Comunicação",
+          "contact-description": "Entre em contato comigo por email(20juliocesar12@gmail.com) ou Whatsapp.",
+          "github-title": "Github",
+          "github-link-text": "Entre no meu gitHub!",
+          "especializacao-title": "Certificados"
+        },
+        en: {
+          "about-title": "About",
+          "about-description": "My name is Julio Cesar, I'm a back-end developer.",
+          "projects-title": "Projects",
+          "project1-description": "This project was developed with HTML, CSS and JS.",
+          "project2-description": "This dating site was developed with HTML, CSS and JS.",
+          "contact-title": "Contact",
+          "contact-description": "Contact me by email (20juliocesar12@gmail.com) or Whatsapp.",
+          "github-title": "Github",
+          "github-link-text": "Check out my GitHub!",
+          "especializacao-title": "Certificates"
+        }
+      };
+
+      // Títulos principais
+      document.querySelectorAll(".lang-about-title").forEach(el => el.textContent = texts[lang]["about-title"]);
+      document.querySelectorAll(".lang-about-description").forEach(el => el.textContent = texts[lang]["about-description"]);
+
+      document.querySelectorAll(".lang-projects-title").forEach(el => el.textContent = texts[lang]["projects-title"]);
+
+      // Descrições dos projetos
+      document.querySelectorAll(".lang-project1-description").forEach(el => el.textContent = texts[lang]["project1-description"]);
+      document.querySelectorAll(".lang-project2-description").forEach(el => el.textContent = texts[lang]["project2-description"]);
+
+      // Comunicação
+      document.querySelectorAll(".lang-contact-title").forEach(el => el.textContent = texts[lang]["contact-title"]);
+      document.querySelectorAll(".lang-contact-description").forEach(el => el.textContent = texts[lang]["contact-description"]);
+
+      // Github
+      document.querySelectorAll(".lang-github-title").forEach(el => el.textContent = texts[lang]["github-title"]);
+      document.querySelectorAll(".lang-github-link").forEach(el => el.textContent = texts[lang]["github-link-text"]);
+
+      // Especialização
+      document.querySelectorAll(".lang-especializacao-title").forEach(el => el.textContent = texts[lang]["especializacao-title"]);
+    }
+    </script>
+
+</body>
+</html>
